@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/MaxOvs19/Example-CG-SELECT/issues"
   },
-  "homepage": "https://github.com/MaxOvs19/Example-CG-SELECT",
+  "homepage": "https://MaxOvs19.github.io/Example-CG-SELECT",
   "dependencies": {
     "cg-select": "^0.2.4",
     "gh-pages": "^5.0.0",
