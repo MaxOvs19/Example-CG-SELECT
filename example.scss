@@ -1,5 +1,5 @@
 // @import '/src/main.scss';
-@import './src/constructor/constructor.scss';
+@import "./src/constructor/constructor.scss";
 
 * {
   font-size: 14px;
@@ -55,7 +55,7 @@
   h1 {
     font-size: 57px;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     margin: 40px 0 12px 0;
   }
 
@@ -255,9 +255,28 @@ pre {
     }
   }
 
+  .stylesTheme {
+    width: 100% !important;
+  }
+
   .example-select_title {
     font-size: 14px;
     height: 40px;
+  }
+
+  .type {
+    display: none;
+  }
+
+  .row {
+    flex-direction: column;
+
+    .col {
+      width: 100%;
+    }
+  }
+  pre {
+    overflow-x: auto !important;
   }
 }
 
