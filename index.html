@@ -31,7 +31,7 @@
             <li><a href="docs/index.html">Documentation</a></li>
           </ul>
         </nav>
-        <p class="version">v. 0.2.5</p>
+        <p class="version">v. 0.2.6</p>
       </header>
     </div>
 
@@ -205,7 +205,7 @@
                 settings. The default theme is the classic theme, you can choose a white or dark
                 theme.
               </p>
-              <code style="display: block; margin-top: 32px">
+              <code style="display: block; margin-top: 104px">
                 <pre>
                   <span class="code__keyword">const</span> <span class="code__var">dropdown</span> = <span class="code__keyword">new</span> <span class="code__class">CGSelect</span>({
                     selector: <span class="code__string">'.cg-dropdown_one',</span> 
@@ -227,21 +227,22 @@
                   To create your own theme, you need to create an object with the following fields.
                   In these fields you need to insert the previously created css class. After
                   creating the object, just pass it to the select settings.
+                  <br>The main interface for creating a theme uses a Json data view, however if you want 
+                  to set the theme locally using classes, use the CustomTheme interface (an example with it is below)
                 </p>
                 <code style="display: block">
                   <pre>
-            <span class="code__keyword">interface</span> <span class="code__var">CustomTheme</span> {
+            <span class="code__keyword">interface</span> <span class="code__var">CustomThemeJson</span> {
               name: <span class="code__class">'string',</span> 
               styles: {
-                head?:  <span class="code__class">'string',</span> 
-                list?: <span class="code__class">'testClass',</span> ,
-                placeholder?: <span class="code__class">'string',</span> ,
-                caret?: <span class="code__class">'string',</span> ,
-                search?: <span class="code__class">'string',</span> ,
-                chips?: <span class="code__class">'string',</span> ,
-                lable?: <span class="code__class">'string',</span> ,
+                head?:  <span class="code__class">object</span> 
+                list?: <span class="code__class">object</span> ,
+                placeholder?: <span class="code__class">object</span> ,
+                caret?: <span class="code__class">object</span> ,
+                search?: <span class="code__class">object</span> ,
+                lable?: <span class="code__class">object</span> ,
               },
-            });
+            };
                   </pre>
                 </code>
               </div>
@@ -251,14 +252,14 @@
           <h5 style="margin: 20px 0 5px; text-align: center">Example:</h5>
 
           <div class="row type">
-            <h6>For JS</h6>
-            <h6>For TS</h6>
+            <h6>CustomTheme</h6>
+            <h6>CustomThemeJson</h6>
           </div>
 
           <div class="row">
             <code style="display: block">
-              <pre>
-        <span class="code__keyword">const</span> <span class="code__var">newTheme</span> = {
+              <pre style="height:430px">
+        <span class="code__keyword">const</span> <span class="code__var">newTheme</span>:<span class="code__class"> CustomTheme</span> = {
           name: <span class="code__string">'test',</span> 
           styles: {
             head:  <span class="code__string">'headTestClass',</span> 
@@ -269,28 +270,38 @@
             chips: <span class="code__string">'chipsTestClass',</span> ,
             lable: <span class="code__string">'lableTestClass',</span> ,
           },
-        });
+        };
               </pre>
             </code>
 
             <code style="display: block">
               <pre>
-        <span class="code__keyword">const</span> <span class="code__var">newCustomTheme</span>:<span class="code__class"> CustomTheme</span>  = {
+        <span class="code__keyword">const</span> <span class="code__var">newCustomTheme</span>:<span class="code__class"> CustomThemeJson</span>  = {
           name: <span class="code__string">'test',</span> 
           styles: {
-            head:  <span class="code__string">'headTestClass',</span> 
-            list: <span class="code__string">'listTestClass',</span> ,
-            placeholder: <span class="code__string">'placeholderTestClass',</span> ,
-            caret: <span class="code__string">'caretTestClass',</span> ,
-            search: <span class="code__string">'searchTestClass',</span> ,
-            chips: <span class="code__string">'chipsTestClass',</span> ,
-            lable: <span class="code__string">'lableTestClass',</span> ,
+            head:  {<span class="code__string">
+                  color: 'red',
+                  background: 'green',
+                </span> },
+            list: {<span class="code__string">
+                  color: 'red',
+                  background: 'green',
+                </span>},
+            placeholder: {<span class="code__string">
+              color: 'red',
+              fontSize: '26px',
+            </span> },
+            caret: {<span class="code__string">
+                borderTop: '6px solid white'  
+            </span> },
+            search: {},
+            lable: {},
           },
-        });
+        };
               </pre>
             </code>
           </div>
-          <h6>CSS</h6>
+          <h6 style="text-align: center; margin-top: 15px;">CSS</h6>
           <code style="display: block; width: 44%" class="stylesTheme">
             <pre>
               .headTestClass {
