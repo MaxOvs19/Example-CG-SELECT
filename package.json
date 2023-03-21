@@ -3,7 +3,7 @@
   "version": "0.2.5",
   "description": "This is a test page to demonstrate the capabilities of the select",
   "scripts": {
-    "start": "parcel ./index.html -p 4500 --open",
+    "start": "parcel ./index.html -p 4660 --open",
     "build": "parcel build ./index.html",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
@@ -22,7 +22,7 @@
   },
   "homepage": "https://MaxOvs19.github.io/Example-CG-SELECT",
   "dependencies": {
-    "cg-select": "^0.2.4",
+    "cg-select": "^0.2.5",
     "gh-pages": "^5.0.0",
     "parcel": "^2.8.3"
   },
