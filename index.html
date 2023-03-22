@@ -205,17 +205,17 @@
                 settings. The default theme is the classic theme, you can choose a white or dark
                 theme.
               </p>
-              <code style="display: block; margin-top: 104px">
-                <pre>
-                  <span class="code__keyword">const</span> <span class="code__var">dropdown</span> = <span class="code__keyword">new</span> <span class="code__class">CGSelect</span>({
-                    selector: <span class="code__string">'.cg-dropdown_one',</span> 
-                    placeholder: <span class="code__string">'Choose a car',</span> 
-                    lable: <span class="code__string">'EXAMPLE',</span> 
-                    items: [
-                      ...
-                    ],
-                    <span class="code__keyword">theme</span>:  <span class="code__string">'dark / white'</span>
-                  });
+              <code style="display: block; margin-top: 104px; ">
+                <pre style="height: 240px;">
+      <span class="code__keyword">const</span> <span class="code__var">dropdown</span> = <span class="code__keyword">new</span> <span class="code__class">CGSelect</span>({
+        selector: <span class="code__string">'.cg-dropdown_one',</span> 
+        placeholder: <span class="code__string">'Choose a car',</span> 
+        lable: <span class="code__string">'EXAMPLE',</span> 
+        items: [
+          ...
+        ],
+        <span class="code__keyword">theme</span>:  <span class="code__string">'dark / white'</span>
+      });
                 </pre>
               </code>
             </div>
@@ -232,17 +232,17 @@
                 </p>
                 <code style="display: block">
                   <pre>
-            <span class="code__keyword">interface</span> <span class="code__var">CustomThemeJson</span> {
-              name: <span class="code__class">'string',</span> 
-              styles: {
-                head?:  <span class="code__class">object</span> 
-                list?: <span class="code__class">object</span> ,
-                placeholder?: <span class="code__class">object</span> ,
-                caret?: <span class="code__class">object</span> ,
-                search?: <span class="code__class">object</span> ,
-                lable?: <span class="code__class">object</span> ,
-              },
-            };
+        <span class="code__keyword">interface</span> <span class="code__var">CustomThemeJson</span> {
+          name: <span class="code__class">'string',</span> 
+          styles: {
+            head?:  <span class="code__class">object</span> 
+            list?: <span class="code__class">object</span> ,
+            placeholder?: <span class="code__class">object</span> ,
+            caret?: <span class="code__class">object</span> ,
+            search?: <span class="code__class">object</span> ,
+            lable?: <span class="code__class">object</span> ,
+          },
+        };
                   </pre>
                 </code>
               </div>
@@ -258,65 +258,59 @@
 
           <div class="row">
             <code style="display: block">
-              <pre style="height:430px">
+              <pre style="height:460px">
         <span class="code__keyword">const</span> <span class="code__var">newTheme</span>:<span class="code__class"> CustomTheme</span> = {
-          name: <span class="code__string">'test',</span> 
-          styles: {
-            head:  <span class="code__string">'headTestClass',</span> 
-            list: <span class="code__string">'listTestClass',</span> ,
-            placeholder: <span class="code__string">'placeholderTestClass',</span> ,
-            caret: <span class="code__string">'caretTestClass',</span> ,
-            search: <span class="code__string">'searchTestClass',</span> ,
-            chips: <span class="code__string">'chipsTestClass',</span> ,
-            lable: <span class="code__string">'lableTestClass',</span> ,
-          },
-        };
+      name: <span class="code__string">'test',</span> 
+      styles: {
+        head:  <span class="code__string">'headTestClass',</span> 
+        list: <span class="code__string">'listTestClass',</span> ,
+        placeholder: <span class="code__string">'placeholderTestClass',</span> ,
+        caret: <span class="code__string">'caretTestClass',</span> ,
+        search: <span class="code__string">'searchTestClass',</span> ,
+        chips: <span class="code__string">'chipsTestClass',</span> ,
+        lable: <span class="code__string">'lableTestClass',</span> ,
+        },
+      };
+      
+      .headTestClass {
+        background-color: <span class="code__string">#8297ff</span>;
+        color: <span class="code__string">white</span>;
+      }
+      .listTestClass {
+        background-color: <span class="code__string">#8297ff</span>;
+        border: <span class="code__string">1px solid black</span>;
+        color: <span class="code__string">white</span> ;
+      }
               </pre>
             </code>
 
             <code style="display: block">
               <pre>
-        <span class="code__keyword">const</span> <span class="code__var">newCustomTheme</span>:<span class="code__class"> CustomThemeJson</span>  = {
-          name: <span class="code__string">'test',</span> 
-          styles: {
-            head:  {<span class="code__string">
-                  color: 'red',
-                  background: 'green',
-                </span> },
-            list: {<span class="code__string">
-                  color: 'red',
-                  background: 'green',
-                </span>},
-            placeholder: {<span class="code__string">
+    <span class="code__keyword">const</span> <span class="code__var">newCustomTheme</span>:<span class="code__class"> CustomThemeJson</span>  = {
+      name: <span class="code__string">'test',</span> 
+      styles: {
+        head:  {<span class="code__string">
               color: 'red',
-              fontSize: '26px',
+              background: 'green',
             </span> },
-            caret: {<span class="code__string">
-                borderTop: '6px solid white'  
-            </span> },
-            search: {},
-            lable: {},
-          },
-        };
+        list: {<span class="code__string">
+              color: 'red',
+              background: 'green',
+            </span>},
+        placeholder: {<span class="code__string">
+          color: 'red',
+          fontSize: '26px',
+        </span> },
+        caret: {<span class="code__string">
+            borderTop: '6px solid white'  
+        </span> },
+        search: {},
+        lable: {},
+      },
+    };
               </pre>
             </code>
           </div>
-          <h6 style="text-align: center; margin-top: 15px;">CSS</h6>
-          <code style="display: block; width: 44%" class="stylesTheme">
-            <pre>
-              .headTestClass {
-                background-color: <span class="code__string">#8297ff</span>;
-                color: <span class="code__string">white</span>;
-              }
-
-              .listTestClass {
-                background-color: <span class="code__string">#8297ff</span>;
-                border: <span class="code__string">1px solid black</span>;
-                color: <span class="code__string">white</span> ;
-              }
-            </pre>
-          </code>
-
           <h6>Example custom theme in CG-Select</h6>
           <p>
             See an example of a select on

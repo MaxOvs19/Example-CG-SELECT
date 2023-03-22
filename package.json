@@ -1,6 +1,6 @@
 {
   "name": "example-cg-select-page",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "This is a test page to demonstrate the capabilities of the select",
   "scripts": {
     "start": "parcel ./index.html -p 4660 --open",
@@ -13,14 +13,22 @@
     "url": "git+https://github.com/MaxOvs19/Example-CG-SELECT.git"
   },
   "keywords": [
-    "exemple-cg-select"
+    "exemple-cg-select",
+    "select",
+    "autocomplete",
+    "dropdown",
+    "multiselect",
+    "tag"
   ],
-  "author": "MaxOvs19",
+  "author": {
+    "name": "CraftGroup",
+    "url": "https://github.com/apuc/"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MaxOvs19/Example-CG-SELECT/issues"
   },
-  "homepage": "https://MaxOvs19.github.io/Example-CG-SELECT",
+  "homepage": "https://cg-select.itguild.info",
   "dependencies": {
     "cg-select": "^0.2.5",
     "gh-pages": "^5.0.0",
