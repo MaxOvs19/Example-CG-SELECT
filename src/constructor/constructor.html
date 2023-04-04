@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:description"
+      content="Feature rich Select control for React/JS with multiselect, autocomplete and styling"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="cg-select" />
+    <meta property="og:url" content="https://cg-select.itguild.info" />
+    <meta property="og:image" content="../img/logoCG.jpg" />
+
+    <title>Cg-Select</title>
+    <link rel="shortcut icon" href="../img/logoCG2.ico" type="image/x-icon" />
+    <link href="../../style.scss" rel="stylesheet" />
+    <link href="constructor.scss" rel="stylesheet" />
+  </head>
+  <body class="body-example">
+    <div class="container">
+      <header class="header">
+        <div class="header__logoBox">
+          <h1>CG-SELECT</h1>
+          <img src="../img/logoCG.jpg" alt="#" class="header__logo" />
+        </div>
+        <hr style="width: 55%" />
+        <nav>
+          <ul class="navlist">
+            <li><a href="../../docs/index.html">Documentation</a></li>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="./constructor.html">Constructor</a></li>
+          </ul>
+        </nav>
+        <p class="version">v. 0.2.7</p>
+      </header>
+    </div>
+
+    <div class="container content">
+        <div class="example-select">
+            <h1 class="example-select_title">Select constructor</h1>
+            <div class="row" style="margin: 20px; color: white">
+              <div class="col">
+                <h5 style="font-size: 18px; margin: 0;">Select Style Builder:</h5>
+                <p style="margin-right: 50px; font-size: 17px">
+                  This is a constructor for styling a select online without downloading. For it to work,
+                  you need to: 
+                  <ol style="font-size: 15px;">
+                    <li class="liList">Select a part of the select for customization. </li>
+                    <li  class="liList">Enter styles in the text field in the form "color: red;".</li>
+                    <li  class="liList">Click on the render button.</li>
+                  </ol>
+                </p>
+              </div>
+              <div class="col">
+                <div class="layout-select constructor">
+                  <button class="cg-dropdown body"></button>
+                  <textarea
+                    name="styles"
+                    id="styles"
+                    cols="30"
+                    rows="5"
+                    class="textareaStyle"
+                    placeholder="Enter CSS properties"
+                    disabled="disabled"
+                  ></textarea>
+                  <button type="button" class="check-code render">Render</button>
+                </div>
+               
+              </div>
+              
+            </div>
+            <div class="layout-select constructor" style="margin-bottom: 60px;">
+              <button class="cg-dropdown select"></button>
+            </div>
+          </div>
+    
+    </div>
+  </body>
+  <script type="module" src="constructor.js"></script>
+</html>
