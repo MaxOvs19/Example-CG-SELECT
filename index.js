@@ -1,8 +1,7 @@
 import CGSelect from "cg-select";
-// import { newCustomTheme } from './src/themeTest';
+import "./src/buttonControlCode";
 
-import "./src/example";
-import "./src/constructor/constructor";
+import "./style.scss";
 
 // ------------------------------Обычный селект--------------------
 const dropdown = new CGSelect({
