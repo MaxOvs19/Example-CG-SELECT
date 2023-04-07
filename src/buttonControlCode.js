@@ -8,68 +8,63 @@ const copy7 = document.getElementById("cp7");
 const copy8 = document.getElementById("cp8");
 
 const firstBtn = document.getElementById("first");
-const codeFirst = document.getElementById("codeFirst");
+const codeFirst = document.getElementById("codeFirst"); // cp1
 
 copyCode(copy1, codeFirst);
 
 const secondBtn = document.getElementById("second");
-const codeSecond = document.getElementById("codeSecond");
+const codeSecond = document.getElementById("codeSecond"); // cp4
 
-copyCode(copy2, codeSecond);
+copyCode(copy4, codeSecond);
 
 const thirdBtn = document.getElementById("third");
-const codeThird = document.getElementById("codeThird");
+const codeThird = document.getElementById("codeThird"); // cp5
+
+copyCode(copy5, codeThird);
 
 const fourthBtn = document.getElementById("fourth");
-const codeFourth = document.getElementById("codeFourth");
+const codeFourth = document.getElementById("codeFourth"); // cp7
+
+copyCode(copy7, codeFourth);
 
 const fifthBtn = document.getElementById("fifth");
-const codeFifth = document.getElementById("codeFifth");
+const codeFifth = document.getElementById("codeFifth"); // cp8
+
+copyCode(copy8, codeFifth);
 
 const six = document.getElementById("six");
-const codeSix = document.getElementById("codeSix");
+const codeSix = document.getElementById("codeSix"); // cp3
+
+copyCode(copy3, codeSix);
 
 const Native = document.getElementById("Native");
-const codeNative = document.getElementById("codeNative");
+const codeNative = document.getElementById("codeNative"); // cp2
+
+copyCode(copy2, codeNative);
 
 const callback = document.getElementById("callback");
-const codeCallback = document.getElementById("codeCallback");
+const codeCallback = document.getElementById("codeCallback"); // cp6
 
-firstBtn.addEventListener("click", () => {
-  codeFirst.classList.toggle("active");
-});
+copyCode(copy6, codeCallback);
 
-secondBtn.addEventListener("click", () => {
-  codeSecond.classList.toggle("active");
-});
-
-thirdBtn.addEventListener("click", () => {
-  codeThird.classList.toggle("active");
-});
-
-fourthBtn.addEventListener("click", () => {
-  codeFourth.classList.toggle("active");
-});
-
-fifthBtn.addEventListener("click", () => {
-  codeFifth.classList.toggle("active");
-});
-
-six.addEventListener("click", () => {
-  codeSix.classList.toggle("active");
-});
-
-Native.addEventListener("click", () => {
-  codeNative.classList.toggle("active");
-});
-
-callback.addEventListener("click", () => {
-  codeCallback.classList.toggle("active");
-});
+toggleCode(firstBtn, codeFirst);
+toggleCode(secondBtn, codeSecond);
+toggleCode(thirdBtn, codeThird);
+toggleCode(fourthBtn, codeFourth);
+toggleCode(fifthBtn, codeFifth);
+toggleCode(six, codeSix);
+toggleCode(Native, codeNative);
+toggleCode(callback, codeCallback);
 
 function copyCode(button, elementCopy) {
   button.addEventListener("click", (e) => {
     e.preventDefault();
     navigator.clipboard.writeText(elementCopy.textContent);
+  });
+}
+
+function toggleCode(button, elementCopy) {
+  button.addEventListener("click", () => {
+    elementCopy.classList.toggle("active");
   });
 }

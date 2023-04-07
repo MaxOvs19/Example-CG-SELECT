@@ -1,6 +1,7 @@
 import CGSelect from "cg-select";
-import "./style.scss";
 import "./src/buttonControlCode";
+
+import "./style.scss";
 
 // ------------------------------Обычный селект--------------------
 const dropdown = new CGSelect({

@@ -1,6 +1,6 @@
 {
   "name": "example-cg-select-page",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "This is a test page to demonstrate the capabilities of the select",
   "scripts": {
     "start": "parcel ./index.html -p 4660 --open",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://cg-select.itguild.info",
   "dependencies": {
-    "cg-select": "^0.2.7",
+    "cg-select": "^0.3.0",
     "gh-pages": "^5.0.0",
     "parcel": "^2.8.3"
   },
